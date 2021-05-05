@@ -3,8 +3,8 @@
     require './config/Curl.php';
 
     // store necessary api endpoints
-    $author_url = 'https://quotemachine-demo.herokuapp.com/quotes/api/authors/';
-    $category_url= 'https://quotemachine-demo.herokuapp.com/quotes/api/categories/';
+    $author_url = 'https://quotemachine-demo.herokuapp.com/api/authors/';
+    $category_url= 'https://quotemachine-demo.herokuapp.com/api/categories/';
 
     // create Curl object for each api request
     $author_request = new Curl();
@@ -26,7 +26,7 @@
 
     if ($action == 'read') {
         // store api endpoint url for getting all quotes
-        $quote_url = 'https://quotemachine-demo.herokuapp.com/quotes/api/quotes/';
+        $quote_url = 'https://quotemachine-demo.herokuapp.com/api/quotes/';
 
         // create Curl object for each api request
         $quote_request = new Curl();
@@ -43,13 +43,13 @@
     elseif ($action == 'sort') {
         // determine the api endpoint from the get request
         if (!empty($_GET['authorId']) && !empty($_GET['categoryId'])) {
-            $quote_url = 'https://quotemachine-demo.herokuapp.com/quotes/api/quotes/' . '?authorId=' . $_GET['authorId'] . '&categoryId=' . $_GET['categoryId'];
+            $quote_url = 'https://quotemachine-demo.herokuapp.com/api/quotes/' . '?authorId=' . $_GET['authorId'] . '&categoryId=' . $_GET['categoryId'];
         } elseif (!empty($_GET['authorId']) && empty($_GET['categoryId'])) {
-            $quote_url = 'https://quotemachine-demo.herokuapp.com/quotes/api/quotes/' . '?authorId=' . $_GET['authorId'];
+            $quote_url = 'https://quotemachine-demo.herokuapp.com/api/quotes/' . '?authorId=' . $_GET['authorId'];
         } else if (empty($_GET['authorId']) && !empty($_GET['categoryId'])) {
-            $quote_url = 'https://quotemachine-demo.herokuapp.com/quotes/api/quotes/' . '?categoryId=' . $_GET['categoryId'];
+            $quote_url = 'https://quotemachine-demo.herokuapp.com/api/quotes/' . '?categoryId=' . $_GET['categoryId'];
         } else {
-            $quote_url = 'https://quotemachine-demo.herokuapp.com/quotes/api/quotes/';
+            $quote_url = 'https://quotemachine-demo.herokuapp.com/api/quotes/';
         }
 
         // create Curl object for each api request
