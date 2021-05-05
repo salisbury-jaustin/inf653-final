@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  width: 100%;
+  margin: 0px; }
+
+.accent {
+  color: #f46796; }
+
+header {
+  background-color: #ddf2ff;
+  width: 100%;
+  border-bottom: solid #683e00; }
+  header h1 {
+    margin: 0px;
+    text-align: left; }
+
+.filter {
+  display: flex; }
+
+#select_inputs {
+  display: flex;
+  flex-flow: row nowrap; }
+
+#card_container {
+  display: flex; }
+
+.card {
+  background-color: #ddf2ff;
+  border: solid #683e00;
+  border-radius: 10%;
+  border-width: 0.25rem;
+  -moz-box-shadow: 2px 2px 2px 3px #3f6696;
+  -webkit-box-shadow: 2px 2px 2px 3px #3f6696;
+  box-shadow: 2px 2px 2px 3px #3f6696; }
+
+@media screen and (max-width: 767.9px) {
+  body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0px; }
+
+  .filter {
+    flex-flow: column-reverse nowrap;
+    margin-top: 0.5rem; }
+
+  #select_inputs {
+    margin-top: 0.15rem; }
+
+  #card_container {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; }
+
+  .card {
+    width: 90%;
+    height: 20%;
+    margin: 1rem 0 0 0;
+    padding: 1rem 1rem 1rem 1rem; }
+
+  .card:last-child {
+    margin-bottom: 1rem; } }
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .filter {
+    margin-top: 1rem; }
+
+  #card_container {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; }
+
+  .card {
+    width: 60%;
+    height: 20%;
+    margin: 2rem 0 0 0;
+    padding: 1rem 1rem 1rem 1rem; }
+
+  .card:last-child {
+    margin-bottom: 2rem; } }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .filter {
+    margin-top: 1.5rem; }
+
+  #card_container {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%; }
+
+  .card {
+    width: 50%;
+    height: 20%;
+    margin: 2rem 0 0 0;
+    padding: 1rem 1rem 1rem 1rem; }
+
+  .card:last-child {
+    margin-bottom: 2rem; } }
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-top: 1.5rem; }
+
+  #card_container {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%; }
+
+  .card {
+    width: 20rem;
+    height: fit-content;
+    margin: 2rem 0 0 0;
+    padding: 1rem 1rem 1rem 1rem; }
+
+  .card:last-child {
+    margin-bottom: 2rem; } }
+
+/*# sourceMappingURL=style.css.map */
