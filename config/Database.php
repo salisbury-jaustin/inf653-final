@@ -1,6 +1,6 @@
 <?php
     class Database {
-        private static $dsn = 'y5svr1t2r5xudqeq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+        private static $dsn = 'mysql:host=y5svr1t2r5xudqeq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=ofc7ux1rd6l05bls';
         private static $username = 'hxy2j1pex5ln4cvo';
         private static $password = 'ef1akxnoqlr5ln47';
         private static $option = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION); // sets error mode for PDO
